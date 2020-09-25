@@ -25,8 +25,14 @@ public class LineComparison {
 		System.out.println("Line 1 length : "+line1_length);
 		System.out.println("Line 2 length : "+line2_length);
 		
-		//Checking equality using equals method
-		System.out.println("Are the two lines equal? "+ line1_length.equals(line2_length));
+		//Checking equality using CompareTo method
+		int result= line1_length.compareTo(line2_length);
+		if(result==0)
+			System.out.println("Both the lines are equal in length.");
+		else if (result<0)
+			System.out.println("Length of line 1 is less than length of line 2");
+		else
+			System.out.println("Length of line 1 is greater than length of line 2");
 	}
 	
 	public static int[] points() {
